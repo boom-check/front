@@ -10,6 +10,6 @@ COPY config.json /app/
 COPY config.json.example /app/
 
 WORKDIR /app
-RUN npm install && node src/deploy-commands.js
+RUN npm install
 
-CMD ["node", "src/index.js"]
+CMD ["sh", "start.sh"]
